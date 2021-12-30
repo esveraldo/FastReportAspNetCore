@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report ScriptLanguage="CSharp" ReportInfo.Created="12/30/2021 16:09:48" ReportInfo.Modified="12/30/2021 16:29:51" ReportInfo.CreatorVersion="2021.3.0.0">
+  <Dictionary>
+    <MySqlDataConnection Name="Connection" ConnectionString="rijcmlqomabmqtwD7y3BaVO988Xrns8n0+Fpps4V7SdlS+EOKQZBca4f/NFvO74vOdrklblSqCCXR8wRV9VnHr85cfRXBrpB1kLf9l+ANlAOpKAktQ=">
+      <TableDataSource Name="usuarios" DataType="System.Int32" Enabled="true" TableName="usuarios">
+        <Column Name="Id" DataType="System.Int32"/>
+        <Column Name="CreatedAt" DataType="System.DateTime"/>
+        <Column Name="UpdatedAt" DataType="System.DateTime"/>
+        <Column Name="Nome" DataType="System.String"/>
+        <Column Name="Email" DataType="System.String"/>
+      </TableDataSource>
+    </MySqlDataConnection>
+  </Dictionary>
+  <ReportPage Name="Page1" Watermark.Font="Arial, 60pt">
+    <ReportTitleBand Name="ReportTitle1" Width="718.2" Height="37.8" Fill.Color="Silver">
+      <TextObject Name="Text1" Left="226.8" Top="9.45" Width="255.15" Height="18.9" Text="Listagem de usuários" HorzAlign="Center" Font="Arial, 16pt" TextFill.Color="White"/>
+    </ReportTitleBand>
+    <PageHeaderBand Name="PageHeader1" Top="41.8" Width="718.2" Height="47.25">
+      <TextObject Name="Text4" Left="207.9" Top="9.45" Width="94.5" Height="18.9" Text="Email" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+      <TextObject Name="Text6" Left="28.35" Top="9.45" Width="94.5" Height="18.9" Text="Nome" HorzAlign="Center" Font="Arial, 10pt, style=Bold"/>
+    </PageHeaderBand>
+    <DataBand Name="Data1" Top="93.05" Width="718.2" Height="75.6" DataSource="usuarios">
+      <TextObject Name="Text3" Left="207.9" Top="9.45" Width="132.3" Height="18.9" Text="[usuarios.Email]" HorzAlign="Center" Font="Arial, 10pt"/>
+      <TextObject Name="Text5" Left="28.35" Top="9.45" Width="94.5" Height="18.9" Text="[usuarios.Nome]" HorzAlign="Center" Font="Arial, 10pt"/>
+    </DataBand>
+    <PageFooterBand Name="PageFooter1" Top="172.65" Width="718.2" Height="56.7" Border.Lines="Top">
+      <TextObject Name="Text7" Left="18.9" Top="18.9" Width="321.3" Height="18.9" Text="Página:[Page] / [TotalPages]" HorzAlign="Center" Font="Arial, 12pt"/>
+    </PageFooterBand>
+  </ReportPage>
+</Report>
